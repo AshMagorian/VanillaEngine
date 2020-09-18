@@ -26,8 +26,6 @@ public:
 	VertexArray();
 	VertexArray(std::string path);
 
-	void MakeCube();
-
 	void SetBuffer(std::string attribute, std::shared_ptr<VertexBuffer> buffer);
 	int GetVertexCount();
 	GLuint GetId();

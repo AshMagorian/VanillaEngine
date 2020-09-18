@@ -24,7 +24,7 @@ void Renderer::OnDisplay()
 	{
 		m_shaderProgram->SetUniform("in_Model", GetEntity()->GetTransform()->GetModelMatrix());
 		m_shaderProgram->SetUniform("in_Material.diffuse", m_tex);
-		m_shaderProgram->SetUniform("in_Material.shininess", 1.0f);
+		m_shaderProgram->SetUniform("in_Material.shininess", 32.0f);
 		m_shaderProgram->Draw(m_va);
 	}
 }

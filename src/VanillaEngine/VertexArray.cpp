@@ -1,11 +1,8 @@
 #include "VertexArray.h"
-#include "ShapeData.h"
 #include "Exception.h"
 
 #include <fstream>
 #include <iostream>
-
-using namespace ShapeData;
 
 void VertexArray::SplitStringWhitespace(std::string& input, std::vector<std::string>& output)
 {
@@ -176,21 +173,6 @@ VertexArray::VertexArray(std::string path)
 	SetBuffer("in_Position", positionBuffer);
 	if (texCoordBuffer) SetBuffer("in_TexCoord", texCoordBuffer);
 	if (normalBuffer) SetBuffer("in_Normal", normalBuffer);
-}
-
-void VertexArray::MakeCube()
-{
-	std::shared_ptr<VertexBuffer> positionBuffer = std::make_shared<VertexBuffer>();
-	std::shared_ptr<VertexBuffer> texCoordBuffer = std::make_shared<VertexBuffer>();
-	std::shared_ptr<VertexBuffer> normalBuffer = std::make_shared<VertexBuffer>();
-
-	positionBuffer->SetData(ShapeData::cubeV, 3);
-	texCoordBuffer->SetData(ShapeData::cubeTexCoords, 2);
-	normalBuffer->SetData(ShapeData::cubeNormals, 3);
-
-	SetBuffer("in_Position", positionBuffer);
-	SetBuffer("in_TexCoord", texCoordBuffer);
-	SetBuffer("in_Normal", normalBuffer);
 }
 
 /**

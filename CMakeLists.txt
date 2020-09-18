@@ -64,8 +64,6 @@ add_library(VanillaEngine
 	src/VanillaEngine/Spotlight.cpp
 	src/VanillaEngine/Input.h
 	src/VanillaEngine/Input.cpp
-	src/VanillaEngine/ShapeData.h
-	src/VanillaEngine/ShapeData.cpp
 )
 
 if(MSVC)
